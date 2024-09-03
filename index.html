@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Physics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <button onclick="spawnRectangle()">Spawn Rectangle</button>
+        <button onclick="spawnCircle()">Spawn Circle</button>
+        <button onclick="spawnTriangle()">Spawn Triangle</button>
+        <button onclick="spawnSquare()">Spawn Square</button>
+        <button onclick="spawnBouncyBall()">Spawn Bouncy Ball</button>
+        <button onclick="spawnDummy()">Spawn Dummy</button>
+		<button id="spawnBomb">Spawn Bomb</button>
+    </div>
+    <canvas id="world"></canvas>
+    <div class="controls">
+        <button onclick="clearWorld()">Clear</button>
+        <button onclick="togglePaintTool()">Toggle Paint Tool</button>
+        <button onclick="toggleAnchorTool()">Toggle Anchor Tool</button>
+        <button onclick="toggleRopeTool()">Toggle Rope Tool</button>
+        <button onclick="toggleImageTool()">Toggle Image Tool</button>
+        <input type="file" id="imageUpload" class="hidden" accept="image/png" />
+    </div>
+    <div id="paintMenu" class="paint-menu hidden">
+        <label for="colorPicker">Choose Color:</label>
+        <input type="color" id="colorPicker" value="#ff0000">
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/matter-js@0.19.0/build/matter.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
